@@ -290,9 +290,13 @@ namespace StudentEF
                     case 9://Register a course
                         Console.WriteLine("Input id Student to register a course:");
                         int sd = Convert.ToInt32(Console.ReadLine());
+                        //check id student
+                        StudentManager.Find(id: sd);
 
                         Console.WriteLine("Input id Subject for a course");
                         int sd2 = Convert.ToInt32(Console.ReadLine());
+                        //check id subject
+                        StudentManager.FindSubject(id: sd2);
 
                         Console.WriteLine("Please enter your DateStart of course in DD/MM/YYYY:");
                         DateTime? dateCourseStart = Console.ReadLine().Dob();
