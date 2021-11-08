@@ -303,6 +303,11 @@ namespace StudentEF
 
                         Console.WriteLine("Please enter your DateEnd of course in DD/MM/YYYY:");
                         DateTime? dateCourseEnd = Console.ReadLine().Dob();
+                        
+                        if (dateCourseEnd < dateCourseStart) 
+                        {
+                            Console.WriteLine("ERROR!!");
+                        }
 
                         StudentManager.RegisterCourse(new StudentClass() { StudentId = sd, SubjectId = sd2, DateTimeStart = dateCourseStart, DateTimeEnd = dateCourseEnd });
                         break;
